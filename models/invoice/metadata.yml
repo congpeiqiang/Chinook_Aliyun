@@ -1,0 +1,52 @@
+# invoice table
+name: invoice
+table_reference:
+  table: invoice
+columns:
+- name: invoiceid
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: true
+- name: customerid
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: invoicedate
+  type: TIMESTAMP
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: billingaddress
+  type: VARCHAR
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: billingcity
+  type: VARCHAR
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: billingstate
+  type: VARCHAR
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: billingcountry
+  type: VARCHAR
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: billingpostalcode
+  type: VARCHAR
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: total
+  type: DOUBLE
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+cached: false
+primary_key: invoiceid

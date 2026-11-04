@@ -1,0 +1,10 @@
+{
+  "datasource": "postgres",
+  "properties": {
+    "host": "8.163.4.42",
+    "port": 5432,
+    "database": "chinook",
+    "user": "chinook",
+    "password": "chinook123"
+  }
+}

@@ -1,0 +1,52 @@
+# track table
+name: track
+table_reference:
+  table: track
+columns:
+- name: trackid
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: true
+- name: name
+  type: VARCHAR
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: albumid
+  type: INTEGER
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: mediatypeid
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: genreid
+  type: INTEGER
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: composer
+  type: VARCHAR
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: milliseconds
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: bytes
+  type: INTEGER
+  is_calculated: false
+  not_null: false
+  is_primary_key: false
+- name: unitprice
+  type: DOUBLE
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+cached: false
+primary_key: trackid

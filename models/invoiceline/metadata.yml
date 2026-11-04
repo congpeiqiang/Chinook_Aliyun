@@ -1,0 +1,32 @@
+# invoiceline table
+name: invoiceline
+table_reference:
+  table: invoiceline
+columns:
+- name: invoicelineid
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: true
+- name: invoiceid
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: trackid
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: unitprice
+  type: DOUBLE
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+- name: quantity
+  type: INTEGER
+  is_calculated: false
+  not_null: true
+  is_primary_key: false
+cached: false
+primary_key: invoicelineid

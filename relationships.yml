@@ -1,0 +1,62 @@
+# Auto-generated from database foreign keys
+relationships:
+- name: album_artist
+  models:
+  - album
+  - artist
+  join_type: MANY_TO_ONE
+  condition: album.artistid = artist.artistid
+- name: customer_employee
+  models:
+  - customer
+  - employee
+  join_type: MANY_TO_ONE
+  condition: customer.supportrepid = employee.employeeid
+- name: invoice_customer
+  models:
+  - invoice
+  - customer
+  join_type: MANY_TO_ONE
+  condition: invoice.customerid = customer.customerid
+- name: invoiceline_invoice
+  models:
+  - invoiceline
+  - invoice
+  join_type: MANY_TO_ONE
+  condition: invoiceline.invoiceid = invoice.invoiceid
+- name: invoiceline_track
+  models:
+  - invoiceline
+  - track
+  join_type: MANY_TO_ONE
+  condition: invoiceline.trackid = track.trackid
+- name: track_album
+  models:
+  - track
+  - album
+  join_type: MANY_TO_ONE
+  condition: track.albumid = album.albumid
+- name: track_genre
+  models:
+  - track
+  - genre
+  join_type: MANY_TO_ONE
+  condition: track.genreid = genre.genreid
+- name: track_mediatype
+  models:
+  - track
+  - mediatype
+  join_type: MANY_TO_ONE
+  condition: track.mediatypeid = mediatype.mediatypeid
+- name: playlisttrack_playlist
+  models:
+  - playlisttrack
+  - playlist
+  join_type: MANY_TO_ONE
+  condition: playlisttrack.playlistid = playlist.playlistid
+- name: playlisttrack_track
+  models:
+  - playlisttrack
+  - track
+  join_type: MANY_TO_ONE
+  condition: playlisttrack.trackid = track.trackid

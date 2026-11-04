@@ -1,0 +1,659 @@
+{
+  "catalog": "wren",
+  "schema": "public",
+  "models": [
+    {
+      "name": "album",
+      "tableReference": {
+        "table": "album"
+      },
+      "columns": [
+        {
+          "name": "albumid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "artistid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "albumid"
+    },
+    {
+      "name": "artist",
+      "tableReference": {
+        "table": "artist"
+      },
+      "columns": [
+        {
+          "name": "artistid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "artistid"
+    },
+    {
+      "name": "customer",
+      "tableReference": {
+        "table": "customer"
+      },
+      "columns": [
+        {
+          "name": "customerid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "firstname",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "lastname",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "company",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "address",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "postalcode",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "fax",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "supportrepid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "customerid"
+    },
+    {
+      "name": "employee",
+      "tableReference": {
+        "table": "employee"
+      },
+      "columns": [
+        {
+          "name": "employeeid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "lastname",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "firstname",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "reportsto",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "birthdate",
+          "type": "TIMESTAMP",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "hiredate",
+          "type": "TIMESTAMP",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "address",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "city",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "state",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "postalcode",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "fax",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "employeeid"
+    },
+    {
+      "name": "genre",
+      "tableReference": {
+        "table": "genre"
+      },
+      "columns": [
+        {
+          "name": "genreid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "genreid"
+    },
+    {
+      "name": "invoice",
+      "tableReference": {
+        "table": "invoice"
+      },
+      "columns": [
+        {
+          "name": "invoiceid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "customerid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "invoicedate",
+          "type": "TIMESTAMP",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "billingaddress",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "billingcity",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "billingstate",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "billingcountry",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "billingpostalcode",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "total",
+          "type": "DOUBLE",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "invoiceid"
+    },
+    {
+      "name": "invoiceline",
+      "tableReference": {
+        "table": "invoiceline"
+      },
+      "columns": [
+        {
+          "name": "invoicelineid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "invoiceid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "trackid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "unitprice",
+          "type": "DOUBLE",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "quantity",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "invoicelineid"
+    },
+    {
+      "name": "mediatype",
+      "tableReference": {
+        "table": "mediatype"
+      },
+      "columns": [
+        {
+          "name": "mediatypeid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "mediatypeid"
+    },
+    {
+      "name": "playlist",
+      "tableReference": {
+        "table": "playlist"
+      },
+      "columns": [
+        {
+          "name": "playlistid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "playlistid"
+    },
+    {
+      "name": "playlisttrack",
+      "tableReference": {
+        "table": "playlisttrack"
+      },
+      "columns": [
+        {
+          "name": "playlistid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "trackid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        }
+      ],
+      "cached": false
+    },
+    {
+      "name": "track",
+      "tableReference": {
+        "table": "track"
+      },
+      "columns": [
+        {
+          "name": "trackid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": true
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "albumid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "mediatypeid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "genreid",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "composer",
+          "type": "VARCHAR",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "milliseconds",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "bytes",
+          "type": "INTEGER",
+          "isCalculated": false,
+          "notNull": false,
+          "isPrimaryKey": false
+        },
+        {
+          "name": "unitprice",
+          "type": "DOUBLE",
+          "isCalculated": false,
+          "notNull": true,
+          "isPrimaryKey": false
+        }
+      ],
+      "cached": false,
+      "primaryKey": "trackid"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "album_artist",
+      "models": [
+        "album",
+        "artist"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "album.artistid = artist.artistid"
+    },
+    {
+      "name": "customer_employee",
+      "models": [
+        "customer",
+        "employee"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "customer.supportrepid = employee.employeeid"
+    },
+    {
+      "name": "invoice_customer",
+      "models": [
+        "invoice",
+        "customer"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "invoice.customerid = customer.customerid"
+    },
+    {
+      "name": "invoiceline_invoice",
+      "models": [
+        "invoiceline",
+        "invoice"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "invoiceline.invoiceid = invoice.invoiceid"
+    },
+    {
+      "name": "invoiceline_track",
+      "models": [
+        "invoiceline",
+        "track"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "invoiceline.trackid = track.trackid"
+    },
+    {
+      "name": "track_album",
+      "models": [
+        "track",
+        "album"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "track.albumid = album.albumid"
+    },
+    {
+      "name": "track_genre",
+      "models": [
+        "track",
+        "genre"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "track.genreid = genre.genreid"
+    },
+    {
+      "name": "track_mediatype",
+      "models": [
+        "track",
+        "mediatype"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "track.mediatypeid = mediatype.mediatypeid"
+    },
+    {
+      "name": "playlisttrack_playlist",
+      "models": [
+        "playlisttrack",
+        "playlist"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "playlisttrack.playlistid = playlist.playlistid"
+    },
+    {
+      "name": "playlisttrack_track",
+      "models": [
+        "playlisttrack",
+        "track"
+      ],
+      "joinType": "MANY_TO_ONE",
+      "condition": "playlisttrack.trackid = track.trackid"
+    }
+  ],
+  "views": [],
+  "cubes": [],
+  "dataSource": "postgres",
+  "layoutVersion": 3
+}
